@@ -4,10 +4,34 @@
         <title>
             Coursera Cousre
         </title>
-        <body>
+        
+        <style>
+           * {
+            margin:0; /*A Universal selector ==> applies to every element in the body*/
+        }
+           
+            a:hover div:nth-child(odd) {  
+                font-size: 24px;
+                background-color:antiquewhite;
+            }
+            a:hover div:nth-child(even) {  
+                font-size: 24px;
+                background-color:darkgray;
+            }
+           </style>
+
+    </head>
+    <body>
             <h1>My Cousera course</h1>
             <h2>Next heading</h2>
             <p>Well done</p>
-        </body>
-    </head>
+            <a>
+                <div>Div 1</div>
+                <div>Div 2</div>
+                <div>Div 3</div>
+                <div>Div 4</div>
+                <div>Div 5</div>
+                <div>Div 6</div>
+              </a>
+    </body>
 </html>
