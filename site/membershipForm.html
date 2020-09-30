@@ -1,15 +1,16 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ህይወት ባጭሩ</title>
+    <title>ለአባልነት</title>
     <script src="https://kit.fontawesome.com/0202a98f66.js" crossorigin="anonymous"></script> <!--font Awasome kit code-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/css/styles.css">
-
+    <link rel="stylesheet" href="bootstrap/css/FormsFormatting.css">
 </head>
 <body>
     <header id="wrapper" class="sticky-top">
@@ -30,14 +31,15 @@
                 </div>
                 <!--'fixe-top' will give us a fixed navigational bar while the page is scrolled-->
                 <!--'fixe-top' could be 'sticky-top' which will scroll with the page untill it touchs the top and then become fixed.-->
-                <button class="navbar-toggler custom-toggler bg-info" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span> <!--The 'custom-toggler class is needed to setup the default button and stroke color using css-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+
                 </button>
 
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav ml-auto ">
-                        <li class="nav-item active">
-                            <a class="nav-link " href="#"><i class="fas fa-home d-none d-md-inline-block"></i>መግቢያ</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i class="fas fa-home d-none d-md-inline-block"></i>መግቢያ</a>
                         </li>
                         <li class="nav-item dropdown dropdown-menu-right">
                             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fas fa-church  d-none d-md-inline-block"></i>ሃይማኖት</a>
@@ -77,7 +79,7 @@
                         </li>
 
                         <li>
-                            <a class="nav-link" href="membershipForm.html">ለአባልነት</a>
+                            <a class="nav-link" href="#">ለአባልነት</a>
                         </li>
                     </ul>
                     <form class="form-inline ml-auto">
@@ -89,53 +91,83 @@
             </div>
         </nav>
     </header>
-    <div class="jambotron jambotron-fluid ">
-        <div class="container-fluid">
-            <div class="jamboContent">
-                <a href="index.html">
-                    <h2>እንኳን ደህና መጡ</h2> <img id="myJamboImg" class="rounded-circle mx-auto img-fluid d-block" src="images/myLogo.png" alt="ማኅበረ ቅዱሳን" />
-                </a>
-            </div>
+
+    <div class="container-fluid maincontent">
+       
+        <div class="box clearfix">
+
+                 <img class="img-fluid" src="images/waterfall-best.jpg" />
         </div>
+
+        <form class="form-group" action="" method="post">
+            <!--post is a secured method used for sensitive data like password -->
+            <!--for the method attribute mostly the values will be 'post' and 'get'-->
+            <div class="form-group">
+                <audio src="Best_Amharic.mp3" type="audio/mp3" controls autoplay loop></audio>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-md-1" for="firstname">First Name:</label>
+                <input type="text" class="form-control col-md-6" id="firstname" name="" />
+            </div>
+            <div class="form-group row">
+
+                <label class="col-md-1" for="lastname">Last Name:</label>
+                <input type="text" class="form-control col-md-6" id="lastname" name="" />
+            </div>
+            <div class="form-group row">
+
+                <label class="col-md-1" for="address">Address:</label>
+                <input type="text" class="form-control col-md-6" id="address" size="30" />
+            </div>
+            <div class="form-group row">
+                <label class="col-md-1" for="suite">Suite/Apt:</label>
+                <input type="text" class="form-control col-md-6" min="3" max="5" id="suite" />
+            </div>
+            <div class="form-group row">
+                <label class="col-md-1" for="state">State:</label>
+                <input type="text" class="form-control col-md-1" id="state" size="3" />
+                <label class="col-md-1" for="city">City:</label>
+                <input type="text" class="form-control col-md-2" id="city" name="" />
+                <label class="col-md-1" for="city">Zip code:</label>
+                <input type="number" class="form-control col-md-2" id="city" name="" />
+
+            </div>
+
+            <div class="form-group row">
+                <!--the size attribute here limits number of characters the text box can take-->
+
+                <b>Gender</b>
+            </div>
+            <div class="form-group row">
+                <label for="#male"> Male:</label>
+                <input id="male" class="col-md-1 " type="radio" name="gender" value="male" />                <!--the value for name attribute should same so that only -->
+                <label for="#male"> Female:</label>
+                <input class="col-md-1" type="radio" name="gender" value="male" />
+            </div>
+            <!--one of the radio button can be selected at a time.-->
+            <div class="form-group row">
+                <label class="col-md-1" for="#emailInput">Email: </label>
+                <input class="col-md-3" type="email" id="emailInput" required />
+                <label class="col-md-2" for="#emailInput">Confrim Email: </label>
+                <input class="col-md-3" type="email" id="emailInput" required />
+            </div>
+            <div class="form-group row">
+                <label class="col-md-1" for="#password">Password: </label>
+                <input class="col-md-3" type="password" id="password" required />
+                <label class="col-md-2" for="#password">Confrim Password: </label>
+                <input class="col-md-3" type="email" id="password" required />
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2" for="#comment">For Your Comment or Complement: </label>
+                <textarea clas="col-md-5" type="text" id="comment" width="400" height="100">
+                </textarea>
+            </div>
+            <button class="btn btn-success" type="button" id="btnSubmit">
+                Submit
+            </button>
+            <!--The autoplay attributes makes the audio file play as the page loads and the loop attributes make it to play continuously-->
+        </form>
     </div>
-
-    <div class="container-fluid mkcontent">
-        <section class="row">
-            <h3 class="col-12 text-uppercase">Navbar1 With Dropdown</h3>
-            <p class="col-sm-6 col-md-4">This example adds a dropdown menu in the navbar. This example adds a dropdown menu in the navbar.</p>
-            <p class="col-sm-6 col-md-4">This example adds a dropdown menu in the navbar. This example adds a dropdown menu in the navbar.</p>
-            <p class="col-sm-6 col-md-4">This example adds a dropdown menu in the navbar. This example adds a dropdown menu in the navbar.</p>
-
-        </section>
-        <section class="row">
-            <h3 class="col-12 text-uppercase">Navbar1 With Dropdown</h3>
-            <p class="col-sm-6 col-md-4">This example adds a dropdown menu in the navbar. This example adds a dropdown menu in the navbar.</p>
-            <p class="col-sm-6 col-md-4">This example adds a dropdown menu in the navbar. This example adds a dropdown menu in the navbar.</p>
-            <p class="col-sm-6 col-md-4">This example adds a dropdown menu in the navbar. This example adds a dropdown menu in the navbar.</p>
-        </section>
-        <section class="row">
-            <h3 class="col-12 text-uppercase">Navbar1 With Dropdown</h3>
-            <p class="col-sm-6 col-md-4">This example adds a dropdown menu in the navbar. This example adds a dropdown menu in the navbar.</p>
-            <p class="col-sm-6 col-md-4">This example adds a dropdown menu in the navbar. This example adds a dropdown menu in the navbar.</p>
-            <p class="col-sm-6 col-md-4">This example adds a dropdown menu in the navbar. This example adds a dropdown menu in the navbar.</p>
-        </section>
-        <section class="row">
-            <h3 class="col-12 text-uppercase">Navbar1 With Dropdown</h3>
-            <p class="col-sm-6 col-md-4">This example adds a dropdown menu in the navbar. This example adds a dropdown menu in the navbar.</p>
-            <p class="col-sm-6 col-md-4">This example adds a dropdown menu in the navbar. This example adds a dropdown menu in the navbar.</p>
-            <p class="col-sm-6 col-md-4">This example adds a dropdown menu in the navbar. This example adds a dropdown menu in the navbar.</p>
-        </section>
-
-    </div>
-    <footer></footer>
-    <!-- jQuery (Bootstrap JS plugins depend on it. It is necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!--<script src="bootstrap/js/bootstrap.min.js"></script>-->
-   
-    <script type="text/javascript" src="bootstrap/js/mainPage.js"></script>
 </body>
 </html>

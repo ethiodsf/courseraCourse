@@ -1,0 +1,22 @@
+﻿#theForm {
+    color: white;
+    display: table;
+    padding: 15px;
+    background-color: lightgrey;
+    border: solid black 2px;
+}
+
+.label1 .label2 {
+    display: table-row
+}
+
+    .intake1 {
+        display: table-cell;
+        padding: 2px;
+        text-align:center;
+    }
+
+    .intake2 {
+        display: table-cell;
+        padding: 2px;
+    }
