@@ -11,6 +11,8 @@ body{
 h1 {
   text-align:center;
   background-color: cadetblue;
+  height: 80px;
+  padding-top:20px;
 }
 section {
   background-color: grey;

@@ -93,17 +93,12 @@
     </header>
 
     <div class="container-fluid maincontent">
-       
-        <div class="box clearfix">
 
-                 <img class="img-fluid" src="images/waterfall-best.jpg" />
-        </div>
-
-        <form class="form-group" action="" method="post">
+        <div class="form-group" action="" method="post">
             <!--post is a secured method used for sensitive data like password -->
             <!--for the method attribute mostly the values will be 'post' and 'get'-->
             <div class="form-group">
-                <audio src="Best_Amharic.mp3" type="audio/mp3" controls autoplay loop></audio>
+                <audio src="images/Adrigehlignal_ena.mp4" type="audio/mp4" controls loop></audio>
             </div>
 
             <div class="form-group row">
@@ -120,6 +115,8 @@
                 <label class="col-md-1" for="address">Address:</label>
                 <input type="text" class="form-control col-md-6" id="address" size="30" />
             </div>
+        </div>
+        <div class="form-group">
             <div class="form-group row">
                 <label class="col-md-1" for="suite">Suite/Apt:</label>
                 <input type="text" class="form-control col-md-6" min="3" max="5" id="suite" />
@@ -130,44 +127,51 @@
                 <label class="col-md-1" for="city">City:</label>
                 <input type="text" class="form-control col-md-2" id="city" name="" />
                 <label class="col-md-1" for="city">Zip code:</label>
-                <input type="number" class="form-control col-md-2" id="city" name="" />
+                <input type="number" class="form-control col-md-2" id="zipeCode" name="" />
 
             </div>
+            <div class="form-group row">
+                <b class="col-md-1">Gender</b>
+            </div>
 
-            <div class="form-group row">
-                <!--the size attribute here limits number of characters the text box can take-->
+            <div class="form-check form-check-inline">
+                <label class="form-check-label" for="male">Male: </label>
+                <input type="radio" class="form-check-input" id="male" name="gender">
+                <label class="form-check-label" for="female">Female: </label>
+                <input type="radio" class="form-check-input" id="female" name="gender">
 
-                <b>Gender</b>
             </div>
-            <div class="form-group row">
-                <label for="#male"> Male:</label>
-                <input id="male" class="col-md-1 " type="radio" name="gender" value="male" />                <!--the value for name attribute should same so that only -->
-                <label for="#male"> Female:</label>
-                <input class="col-md-1" type="radio" name="gender" value="male" />
-            </div>
-            <!--one of the radio button can be selected at a time.-->
-            <div class="form-group row">
-                <label class="col-md-1" for="#emailInput">Email: </label>
-                <input class="col-md-3" type="email" id="emailInput" required />
-                <label class="col-md-2" for="#emailInput">Confrim Email: </label>
-                <input class="col-md-3" type="email" id="emailInput" required />
-            </div>
-            <div class="form-group row">
-                <label class="col-md-1" for="#password">Password: </label>
-                <input class="col-md-3" type="password" id="password" required />
-                <label class="col-md-2" for="#password">Confrim Password: </label>
-                <input class="col-md-3" type="email" id="password" required />
-            </div>
-            <div class="form-group row">
-                <label class="col-md-2" for="#comment">For Your Comment or Complement: </label>
-                <textarea clas="col-md-5" type="text" id="comment" width="400" height="100">
-                </textarea>
-            </div>
-            <button class="btn btn-success" type="button" id="btnSubmit">
-                Submit
-            </button>
-            <!--The autoplay attributes makes the audio file play as the page loads and the loop attributes make it to play continuously-->
-        </form>
+        </div>
+        <!--one of the radio button can be selected at a time.-->
+
+        <div class="form-group form-inline">
+            <label class="mr-5" for="email">Email: </label>
+            <input type="email" class="form-control mr-5" id="email" placeholder="Email" required>
+            <label class="mr-5" for="#ConfEmail">Confrim Email: </label>
+            <input class="form-control" type="email" id="ConfEmail" placeholder="Confirm Email" required />
+        </div>
+
+        <div class="form-group form-inline">
+            <label class="mr-3" for="inputPassword">Password: </label>
+            <input type="password" class="form-control mr-5" id="inputPassword" placeholder="Password">
+            <label class="mr-3" for="#passwordConf">Confrim Password: </label>
+            <input class="form-control" type="email" id="passwordConf" placeholder="Confirm Password" required />
+        </div>
+
+        <div class="form-group w-50">
+            <label class="mr-3" for="#comment">For Your Comment or Complement: </label>
+            <textarea clas="form-control" type="text" id="comment" placeholder="Comment">   </textarea>
+        </div>
+
+        <!--<div class="form-group w-25">
+            <label for="example1">Input with class .w-25</label>
+            <textarea type="text" class="form-control" id="example1" placeholder="25% width of the parent"></textarea>
+        </div>-->
+        <button class="btn btn-success" type="button" id="btnSubmit"> Submit </button>
+
+        <button class="btn btn-light" type="button" id="btnPrint" onclick="print_current_page()"> Print </button>
+        <!--The autoplay attributes makes the audio file play as the page loads and the loop attributes make it to play continuously-->
     </div>
+    <script type="text/javascript" src="bootstrap/js/memberShipForm.js"></script>
 </body>
 </html>
